@@ -41,20 +41,10 @@ const Welcome: React.FC = () => {
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {companies.map((c, i) => (
-              <div
-                key={i}
-                className="bg-surface p-4 rounded-lg border border-border hover:shadow-md transition-shadow"
-              >
+              <div key={i} className="bg-surface p-4 rounded-lg border border-border hover:shadow-md transition-shadow">
                 <h3 className="font-medium text-ink">{c.name}</h3>
                 <p className="text-sm text-muted line-clamp-2">{c.description}</p>
-                
-                  href={`https://wa.me/${c.whatsapp.replace("+", "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-block text-accent font-medium hover:underline"
-                >
-                  Contactar por WhatsApp
-                </a>
+                <a href={`https://wa.me/${c.whatsapp.replace("+", "")}`} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-accent font-medium hover:underline">Contactar por WhatsApp</a>
               </div>
             ))}
           </div>
