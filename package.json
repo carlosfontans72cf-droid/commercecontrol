@@ -1,0 +1,16 @@
+{
+  "name": "commercecontrol",
+  "private": true,
+  "version": "1.0.0",
+  "description": "App multi-empresa de control de inventario, pedidos, empleados y nómina",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

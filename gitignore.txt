@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env.local
+.env.*.local
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist
+out
+.build
+
+# IDE
+.vscode/
+.idea/
+*.tsvs
+*.tslint
+
+# Firebase
+.firebaserc
+firebase-styles.json
+firebase.json
+.namerc
+
+# Vercel
+.vercel
+
+# Logs
+npm-debug.log*
+yarn.log*
+
+# Misc
+.DS_Store
