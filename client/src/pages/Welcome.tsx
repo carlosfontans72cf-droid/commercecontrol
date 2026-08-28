@@ -14,45 +14,44 @@ const Welcome: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans text-gray-800">
-      <header className="bg-white shadow px-6 py-4">
+    <div className="min-h-screen bg-background font-sans text-ink">
+      <header className="bg-surface shadow-sm px-6 py-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <h1 className="text-2xl font-bold text-primary">CommerceControl</h1>
+          <h1 className="text-2xl font-bold text-ink">CommerceControl</h1>
           <nav>
-            <Link to="/login" className="text-sm text-primary font-medium">Iniciar sesión</Link>
-            <span className="mx-2">|</span>
-            <Link to="/register" className="text-sm text-primary font-medium">Regístrate</Link>
+            <Link to="/login" className="text-sm text-accent font-medium hover:underline">Iniciar sesión</Link>
+            <span className="mx-2 text-muted">|</span>
+            <Link to="/register" className="text-sm text-accent font-medium hover:underline">Regístrate</Link>
           </nav>
         </div>
       </header>
 
-      <main className="max-w-4xl mx-auto py-12">
+      <main className="max-w-4xl mx-auto py-12 px-6">
         <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">Gestioná tu negocio desde cualquier lugar</h2>
-          <p className="text-gray-600 leading-relaxed">
+          <h2 className="text-2xl font-semibold mb-4 text-ink">Gestioná tu negocio desde cualquier lugar</h2>
+          <p className="text-muted leading-relaxed">
             Control de inventario, pedidos, empleados, nómina y más. Todo en una sola plataforma, diseñada para pequeñas y medianas empresas.
           </p>
         </section>
 
-        {/* Sección de empresas participantes */}
         <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-4">Más de 3.000 empresas ya confían en nosotras</h2>
-          <p className="text-gray-500 mb-6">
+          <h2 className="text-xl font-semibold mb-4 text-ink">Más de 3.000 empresas ya confían en nosotras</h2>
+          <p className="text-muted mb-6">
             Conocé a algunas de las pyme que ya usan CommerceControl para organizar su día a día.
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {companies.map((c, i) => (
               <div
                 key={i}
-                className="bg-white p-4 rounded border border-gray-200 hover:shadow-md transition-shadow"
+                className="bg-surface p-4 rounded-lg border border-border hover:shadow-md transition-shadow"
               >
-                <h3 className="font-medium">{c.name}</h3>
-                <p className="text-sm text-gray-500 line-clamp-2">{c.description}</p>
-                <a
+                <h3 className="font-medium text-ink">{c.name}</h3>
+                <p className="text-sm text-muted line-clamp-2">{c.description}</p>
+                
                   href={`https://wa.me/${c.whatsapp.replace("+", "")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-2 inline-block text-primary font-medium underline"
+                  className="mt-2 inline-block text-accent font-medium hover:underline"
                 >
                   Contactar por WhatsApp
                 </a>
@@ -61,25 +60,24 @@ const Welcome: React.FC = () => {
           </div>
         </section>
 
-        {/* Sección de noticias / publicidad gratuita */}
         <section>
-          <h2 className="text-xl font-semibold mb-4">Noticias y ofertas gratuitas</h2>
-          <p className="text-gray-500 mb-6">
+          <h2 className="text-xl font-semibold mb-4 text-ink">Noticias y ofertas gratuitas</h2>
+          <p className="text-muted mb-6">
             En esta sección mostramos publicidad de otras aplicaciones y servicios
             útiles para tu negocio, de manera totalmente gratuita.
           </p>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {news.map((n, i) => (
-              <div key={i} className="bg-white p-4 rounded border border-gray-200">
-                <h3 className="font-medium text-primary">{n.title}</h3>
-                <p className="text-sm text-gray-500 line-clamp-2">{n.text}</p>
+              <div key={i} className="bg-surface p-4 rounded-lg border border-border">
+                <h3 className="font-medium text-accent">{n.title}</h3>
+                <p className="text-sm text-muted line-clamp-2">{n.text}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <footer className="mt-12 pt-8 border-t border-gray-200 text-center">
-          <p className="text-sm text-gray-500">
+        <footer className="mt-12 pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted">
             © {new Date().getFullYear()} CommerceControl. Todos los derechos reservados.
           </p>
         </footer>
