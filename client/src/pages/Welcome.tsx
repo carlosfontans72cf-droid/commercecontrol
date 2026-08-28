@@ -46,7 +46,7 @@ const Welcome: React.FC = () => {
                 className="bg-surface p-4 rounded-lg border border-border hover:shadow-md transition-shadow"
               >
                 <h3 className="font-medium text-ink">{c.name}</h3>
-                <p className="text-sm text-muted line-clamp-2">{c.description}</p>
+                                <p className="text-sm text-muted line-clamp-2">{c.description}</p>
                 
                   href={`https://wa.me/${c.whatsapp.replace("+", "")}`}
                   target="_blank"
